@@ -255,7 +255,7 @@ spec:
           - name: AD_SERVICE_ADDR
             value: "adservice:9555"
           - name: ENV_PLATFORM
-            value: "Test"
+            value: "Azure"
           # - name: DISABLE_TRACING
           #   value: "1"
           # - name: DISABLE_PROFILER
