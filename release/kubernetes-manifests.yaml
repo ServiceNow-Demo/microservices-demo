@@ -33,7 +33,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: hub.docker.com/repository/docker/servicenowdevops/emailservice
+        image: docker.io/servicenowdevops/emailservice:latest
         ports:
         - containerPort: 8080
         env:
@@ -218,7 +218,7 @@ spec:
       serviceAccountName: default
       containers:
         - name: server
-          image: hub.docker.com/repository/docker/servicenowdevops/frontend
+          image: docker.io/servicenowdevops/frontend:latest
           ports:
           - containerPort: 8080
           readinessProbe:
