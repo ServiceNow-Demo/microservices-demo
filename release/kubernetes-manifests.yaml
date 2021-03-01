@@ -218,7 +218,7 @@ spec:
       serviceAccountName: default
       containers:
         - name: server
-          image: gcr.io/google-samples/microservices-demo/frontend:v0.2.1
+          image: hub.docker.com/repository/docker/servicenowdevops/frontend
           ports:
           - containerPort: 8080
           readinessProbe:
