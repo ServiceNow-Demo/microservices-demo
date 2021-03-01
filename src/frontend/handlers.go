@@ -112,7 +112,7 @@ func (plat *platformDetails) setPlatformDetails(env string) {
 		plat.provider = "Azure"
 		plat.css = "azure-platform"
 	} else {
-		plat.provider = os.Getenv ("env")
+		plat.provider = os.LookupEnv("ENV_PLATFORM")
 		plat.css = "gcp-platform"
 	}
 }
