@@ -26,7 +26,7 @@ public class JUnitReportGenerationTest {
  
     @Test
     public void equalToTest() {
-        assertThat(developer, is("Vinod"));
+        assertThat(developer, is("Any"));
     }
      
     @Test
