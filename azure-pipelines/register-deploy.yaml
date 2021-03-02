@@ -34,7 +34,7 @@ stages:
             curl -X POST -H "Content-Type: application/json" "$NOW_API" \
             --user $(nowUserName):$(nowPassword) \
             -d @registration/$(serviceMap).json | jq .
-  - stage: Register_Services
+  - stage: Deploy
     jobs:
       - job: Deploy
         steps:  
