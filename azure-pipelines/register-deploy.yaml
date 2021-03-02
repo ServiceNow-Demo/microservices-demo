@@ -37,9 +37,10 @@ stages:
   - stage: Approve
     jobs:
       - job: Change
-      - task: ServiceNow-DevOps-Server-Change-Acceleration@1
-        inputs:
-          connectedServiceName: 'snow-devops'
+        steps:
+        - task: ServiceNow-DevOps-Server-Change-Acceleration@1
+          inputs:
+            connectedServiceName: 'snow-devops'
   - stage: Deploy
     jobs:
       - job: Deploy
