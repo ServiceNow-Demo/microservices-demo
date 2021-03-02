@@ -35,9 +35,9 @@ stages:
             --user $(nowUserName):$(nowPassword) \
             -d @registration/$(serviceMap).json | jq .
         steps:
--task: KubernetesManifest@0
-  displayName: deploy
-  inputs:
-    kubernetesServiceConnection: 'sndevops-demos'
-    namespace: demos
-    manifests: 'release/kubernetes-manifests.yaml'
+        task: KubernetesManifest@0
+        displayName: deploy
+        inputs:
+          kubernetesServiceConnection: 'sndevops-demos'
+          namespace: demos
+          manifests: 'release/kubernetes-manifests.yaml'
