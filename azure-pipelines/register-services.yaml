@@ -34,8 +34,8 @@ stages:
             curl -X POST -H "Content-Type: application/json" "$NOW_API" \
             --user $(nowUserName):$(nowPassword) \
             -d @registration/$(serviceMap).json | jq .
-            steps:
-- task: KubernetesManifest@0
+        steps:
+-task: KubernetesManifest@0
   displayName: deploy
   inputs:
     kubernetesServiceConnection: 'sndevops-demos'
