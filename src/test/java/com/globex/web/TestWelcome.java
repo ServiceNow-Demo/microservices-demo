@@ -1,6 +1,6 @@
 package com.globex.web;
 
-import com.globex.web.config.SpringConfig;
+// import com.globex.web.config.SpringConfig;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
