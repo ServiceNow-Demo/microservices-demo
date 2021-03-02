@@ -38,10 +38,6 @@ stages:
     jobs:
       - job: Change
         steps:
-        - task: ServiceNow-DevOps-Server-Change-Acceleration@1
-          inputs:
-          connectedServiceName: 'snow-devops'
-          UpstreamJob: 'Register_Services'
   - stage: Deploy
     jobs:
       - job: Deploy
