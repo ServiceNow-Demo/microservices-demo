@@ -1,0 +1,81 @@
+# Maven package Java project Web App to Linux on Azure
+# Build your Java project and deploy it to Azure as a Linux web app
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/java
+
+trigger:
+- none
+# - master
+
+variables:
+
+  ### Variables ###
+  nowUserName: '$(NOW_USERNAME)'
+  nowPassword: '$(NOW_PASSWORD)'
+  nowServer: '$(NOW_SERVER)'
+  serviceMap: '$(SERVICE_MAP)'
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+stages:
+
+  ################################################################################
+  #                         Register Services Stage                              #
+  ################################################################################
+  - stage: Register_Services
+    jobs:
+      - job: Register_Services
+        steps:  
+        - bash: |
+            set -x # Echo Commands
+            # Register Services
+            NOW_API="$(nowServer)/api/sn_sro/service_registration/builder"
+            curl -X POST -H "Content-Type: application/json" "$NOW_API" \
+            --user $(nowUserName):$(nowPassword) \
+            -d @registration/$(serviceMap).json | jq .
+- job: Job_2
+  displayName: Approve
+  dependsOn: Job_3
+  pool: server
+  steps:
+  - task: ServiceNow-DevOps-Server-Change-Acceleration@1
+    displayName: ServiceNow DevOps Server Change Acceleration
+    inputs:
+      connectedServiceName: f4d97422-b050-48bf-ba15-22d105c668c6
+- job: Job_1
+  displayName: Deploy
+  dependsOn: Job_2
+  pool:
+    vmImage: ubuntu-16.04
+  steps:
+  - checkout: self
+  - task: KubernetesManifest@0
+    displayName: deploy
+    inputs:
+      kubernetesServiceConnection: 6f954756-4b4b-43e7-ae61-953ff485da5b
+      namespace: demos
+      manifests: release/kubernetes-manifests.yaml
+  - task: ServiceNow-DevOps-Agent-Package-Registration@1
+    displayName: ServiceNow DevOps Agent Package Registration
+    inputs:
+      connectedServiceName: f4d97422-b050-48bf-ba15-22d105c668c6
+      packageName: boutique-release
+      artifactsPayload: >
+        {
+            "artifacts": [
+            {
+                "name": "shippingservice",
+                "repositoryName": "boutique",
+                "version": "1.8",
+                "pipelineName":"$(system.teamProject)/$(build.definitionName)",
+                "taskExecutionNumber":"$(build.buildId)",
+                "stageName":"$(system.jobDisplayName)",
+                "branchName":"$(build.sourceBranchName)"
+            }],
+            "pipelineName":"$(system.teamProject)/$(build.definitionName)",
+            "taskExecutionNumber":"$(build.buildId)",
+            "stageName":"$(system.jobDisplayName)",
+            "branchName":"$(build.sourceBranchName)"
+        }
+
