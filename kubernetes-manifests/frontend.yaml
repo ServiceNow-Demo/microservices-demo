@@ -67,7 +67,9 @@ spec:
           - name: AD_SERVICE_ADDR
             value: "adservice:9555"
           - name: ENV_PLATFORM
-            value: "gcp"
+          ############# Change cloud platform here #################################
+            value: "azure"
+          #######################
           # - name: DISABLE_TRACING
           #   value: "1"
           # - name: DISABLE_PROFILER
