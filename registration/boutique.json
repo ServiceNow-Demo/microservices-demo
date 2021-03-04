@@ -6,7 +6,7 @@
       "description": "Boutique for Beautiful Things"
     },
     {
-      "name": "frontend-external",
+      "name": "frontend",
       "description": "Frontend Service"
     },
     {
@@ -14,7 +14,7 @@
       "description": "Product Catalog Service"
     },
     {
-      "name": "cartservice",
+      "name": "cartservice1",
       "description": "Shopping Cart Service"
     },
     {
@@ -57,10 +57,10 @@
     },
     {
       "parent": "frontend",
-      "child": "cartservice"
+      "child": "cartservice1"
     },
     {
-      "parent": "cartservice",
+      "parent": "cartservice1",
       "child": "redis-cart"
     },
     {
@@ -101,7 +101,7 @@
     },
     {
       "parent": "checkoutservice",
-      "child": "cartservice"
+      "child": "cartservice1"
     },
     {
       "parent": "checkoutservice",
