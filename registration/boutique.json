@@ -14,7 +14,7 @@
       "description": "Product Catalog Service"
     },
     {
-      "name": "cartservice1",
+      "name": "cartservice",
       "description": "Shopping Cart Service"
     },
     {
@@ -60,7 +60,7 @@
       "child": "cartservice1"
     },
     {
-      "parent": "cartservice1",
+      "parent": "cartservice",
       "child": "redis-cart"
     },
     {
