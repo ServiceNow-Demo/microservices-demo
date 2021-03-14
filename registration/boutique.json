@@ -101,7 +101,7 @@
     },
     {
       "parent": "checkoutservice",
-      "child": "cartservice1"
+      "child": "cartservice"
     },
     {
       "parent": "checkoutservice",
