@@ -57,7 +57,7 @@
     },
     {
       "parent": "frontend",
-      "child": "cartservice1"
+      "child": "cartservice"
     },
     {
       "parent": "cartservice",
