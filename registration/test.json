@@ -56,8 +56,8 @@
       "child": "frontend"
     },
     {
-     "parent":  "frontend",
-     "child":   "recommendationservice"
+      "parent": "frontend",
+      "child":  "recommendationservice"
     }
   ]
 }
