@@ -49,5 +49,31 @@
       "name": "shippingservice",
       "description": "Shipping Service"
     }
+  ],
+  "relationships": [
+    {
+      "parent": "Boutique",
+      "child": "frontend"
+    },
+    {
+      "parent": "frontend",
+      "child": "cartservice"
+    },
+    {
+      "parent": "cartservice",
+      "child": "redis-cart"
+    },
+    {
+      "parent": "frontend",
+      "child": "recommendationservice"
+    },
+    {
+      "parent": "recommendationservice",
+      "child": "productcatalogservice"
+    },
+    {
+      "parent": "frontend",
+      "child": "productcatalogservice"
+    }
   ]
 }
