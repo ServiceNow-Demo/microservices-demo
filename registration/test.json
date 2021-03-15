@@ -2,18 +2,18 @@
   "services": [
     {
       "$class": "Business Service",
-      "name": "BusSrv1",
-      "description": "Business Service"
+      "name": "Boutique",
+      "description": "Online bouttique for vintage things"
     },
     {
-      "name": "masterservice",
-      "description": "Master Service"
+      "name": "frontend",
+      "description": "Frontend Service"
     }
   ],
   "relationships": [
     {
-      "parent": "BusSrv1",
-      "child": "masterservice"
+      "parent": "Boutique",
+      "child": "frontend"
     }
   ]
 }
