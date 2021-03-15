@@ -1,0 +1,19 @@
+{
+  "services": [
+    {
+      "$class": "Business Service",
+      "name": "BusSrv1",
+      "description": "Business Service"
+    },
+    {
+      "name": "masterservice",
+      "description": "Master Service"
+    }
+  ],
+  "relationships": [
+    {
+      "parent": "BusSrv1",
+      "child": "masterservice"
+    }
+  ]
+}
