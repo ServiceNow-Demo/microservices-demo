@@ -58,10 +58,6 @@
     {
         "parent": "frontend",
         "child": "cartservice"
-    },
-    {
-        "parent": "cartservice",
-        "child": "redis-cart"
     }
   ]
 }
