@@ -9,11 +9,23 @@
       "name": "frontend",
       "description": "Frontend Service"
     }
+    {
+      "name": "productcatalogservice",
+      "description": "Product Catalog Service"
+    }
+    {
+      "name": "cartservice",
+      "description": "Shopping Cart Service Service"
+    }
   ],
   "relationships": [
     {
       "parent": "Boutique",
       "child": "frontend"
+    }
+    {
+      "parent": "frontend",
+      "child": "productcatalogservice"
     }
   ]
 }
