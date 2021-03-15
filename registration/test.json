@@ -60,10 +60,6 @@
         "child": "cartservice"
     },
     {
-        "parent":"frontend",
-        "child": "recommendationservice"
-    },
-    {
         "parent": "cartservice",
         "child": "redis-cart"
     }
