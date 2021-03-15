@@ -74,42 +74,6 @@
     {
       "parent": "frontend",
       "child": "productcatalogservice"
-    },
-    {
-      "parent": "frontend",
-      "child": "adservice"
-    },
-    {
-      "parent": "frontend",
-      "child": "checkoutservice"
-    },
-    {
-      "parent": "frontend",
-      "child": "currencyservice"
-    },
-    {
-      "parent": "checkoutservice",
-      "child": "emailservice"
-    },
-    {
-      "parent": "checkoutservice",
-      "child": "paymentservice"
-    },
-    {
-      "parent": "checkoutservice",
-      "child": "shippingservice"
-    },
-    {
-      "parent": "checkoutservice",
-      "child": "cartservice"
-    },
-    {
-      "parent": "checkoutservice",
-      "child": "productcatalogservice"
-    },
-    {
-      "parent": "checkoutservice",
-      "child": "currencyservice"
     }
   ]
 }
