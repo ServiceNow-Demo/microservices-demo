@@ -54,6 +54,10 @@
     {
       "parent": "Boutique",
       "child": "frontend"
+    },
+    {
+        "parent": "frontend",
+        "child":"recommendationservice"
     }
   ]
 }
