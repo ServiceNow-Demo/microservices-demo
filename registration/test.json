@@ -54,6 +54,18 @@
     {
       "parent": "Boutique",
       "child": "frontend"
+    },
+    {
+        "parent": "frontend",
+        "child": "cartservice"
+    },
+    {
+        "parent":"frontend",
+        "child": "recommendationservice"
+    },
+    {
+        "parent": "cartservice",
+        "child": "redis-cart"
     }
   ]
 }
