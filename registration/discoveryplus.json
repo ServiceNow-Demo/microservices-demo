@@ -2,114 +2,59 @@
   "services": [
     {
       "$class": "Business Service",
-      "name": "Boutique",
-      "description": "Boutique for Beautiful Things"
+      "name": "Discovery Plus",
+      "description": "Discovery Plus Business Service"
     },
     {
-      "name": "frontend",
-      "description": "Frontend Service"
+      "$class": "Business Service",
+      "name": "Streaming Content Services",
+      "description": "Streaming Content Services Business Application"
     },
     {
-      "name": "productcatalogservice",
-      "description": "Product Catalog Service"
+      "name": "Discovery Plus Prod",
+      "description": "Discovery Plus Production Application Service"
     },
     {
-      "name": "cartservice",
-      "description": "Shopping Cart Service"
+      "name": "Streaming Catalog",
+      "description": "Streaming Catalog MicroService"
     },
     {
-      "name": "redis-cart",
-      "description": "Redis Shopping Cart Service Backend"
+      "name": "Ratings",
+      "description": "Ratings MicroService"
     },
     {
-      "name": "recommendationservice",
-      "description": "Recommendation Service"
+      "name": "Reviews",
+      "description": "Reviews MicroService"
     },
     {
-      "name": "adservice",
-      "description": "Ad Server Service"
-    },
-    {
-      "name": "checkoutservice",
-      "description": "Checkout Service"
-    },
-    {
-      "name": "currencyservice",
-      "description": "Currency Service"
-    },
-    {
-      "name": "emailservice",
-      "description": "E-Mail Service"
-    },
-    {
-      "name": "paymentservice",
-      "description": "E-Mail Service"
-    },
-    {
-      "name": "shippingservice",
-      "description": "Shipping Service"
+      "name": "Subscriptions",
+      "description": "Subscriptions MicroService"
     }
   ],
   "relationships": [
     {
-      "parent": "Boutique",
-      "child": "frontend"
+      "parent": "Discovery Plus",
+      "child": "Streaming Content Services"
     },
     {
-      "parent": "frontend",
-      "child": "cartservice"
+      "parent": "Streaming Content Services",
+      "child": "Discovery Plus Prod"
     },
     {
-      "parent": "cartservice",
-      "child": "redis-cart"
+      "parent": "Discovery Plus Prod",
+      "child": "Streaming Catalog"
     },
     {
-      "parent": "frontend",
-      "child": "recommendationservice"
+      "parent": "Discovery Plus Prod",
+      "child": "Ratings"
     },
     {
-      "parent": "recommendationservice",
-      "child": "productcatalogservice"
+      "parent": "Discovery Plus Prod",
+      "child": "Reviews"
     },
     {
-      "parent": "frontend",
-      "child": "productcatalogservice"
-    },
-    {
-      "parent": "frontend",
-      "child": "adservice"
-    },
-    {
-      "parent": "frontend",
-      "child": "checkoutservice"
-    },
-    {
-      "parent": "frontend",
-      "child": "currencyservice"
-    },
-    {
-      "parent": "checkoutservice",
-      "child": "emailservice"
-    },
-    {
-      "parent": "checkoutservice",
-      "child": "paymentservice"
-    },
-    {
-      "parent": "checkoutservice",
-      "child": "shippingservice"
-    },
-    {
-      "parent": "checkoutservice",
-      "child": "cartservice"
-    },
-    {
-      "parent": "checkoutservice",
-      "child": "productcatalogservice"
-    },
-    {
-      "parent": "checkoutservice",
-      "child": "currencyservice"
+      "parent": "Discovery Plus Prod",
+      "child": "Subscriptions"
     }
   ]
 }
