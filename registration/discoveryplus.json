@@ -30,5 +30,31 @@
       "name": "Subscriptions",
       "description": "Subscriptions MicroService"
     }
+  ],
+  "relationships": [
+    {
+      "parent": "Discovery Plus",
+      "child": "Streaming Content Services"
+    },
+    {
+      "parent": "Streaming Content Services",
+      "child": "Discovery Plus Prod"
+    },
+    {
+      "parent": "Discovery Plus Prod",
+      "child": "Streaming Catalog"
+    },
+    {
+      "parent": "Discovery Plus Prod",
+      "child": "Ratings"
+    },
+    {
+      "parent": "Discovery Plus Prod",
+      "child": "Reviews"
+    },
+    {
+      "parent": "Discovery Plus Prod",
+      "child": "Subscriptions"
+    }
   ]
 }
