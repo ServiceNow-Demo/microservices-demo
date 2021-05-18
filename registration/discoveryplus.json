@@ -2,8 +2,8 @@
   "services": [
     {
       "$class": "Business Service",
-      "name": "Discovery Plus",
-      "description": "Discovery Plus Business Service"
+      "name": "Sirius XM",
+      "description": "Sirius XM Business Service"
     },
     {
       "$class": "Business Service",
@@ -11,7 +11,7 @@
       "description": "Streaming Content Services Business Application"
     },
     {
-      "name": "Discovery Plus Prod",
+      "name": "Sirius XM Prod",
       "description": "Discovery Plus Production Application Service"
     },
     {
@@ -33,27 +33,27 @@
   ],
   "relationships": [
     {
-      "parent": "Discovery Plus",
+      "parent": "Sirius XM",
       "child": "Streaming Content Services"
     },
     {
       "parent": "Streaming Content Services",
-      "child": "Discovery Plus Prod"
+      "child": "Sirius XM Prod"
     },
     {
-      "parent": "Discovery Plus Prod",
+      "parent": "Sirius XM Prod",
       "child": "Streaming Catalog"
     },
     {
-      "parent": "Discovery Plus Prod",
+      "parent": "Sirius XM Prod",
       "child": "Ratings"
     },
     {
-      "parent": "Discovery Plus Prod",
+      "parent": "Sirius XM Prod",
       "child": "Reviews"
     },
     {
-      "parent": "Discovery Plus Prod",
+      "parent": "Sirius XM Prod",
       "child": "Subscriptions"
     }
   ]
