@@ -1,0 +1,60 @@
+{
+  "services": [
+    {
+      "$class": "Business Service",
+      "name": "Sirius XM",
+      "description": "Sirius XM Business Service"
+    },
+    {
+      "$class": "Business Service",
+      "name": "Streaming Content Services",
+      "description": "Streaming Content Services Business Application"
+    },
+    {
+      "name": "Sirius XM Prod",
+      "description": "Discovery Plus Production Application Service"
+    },
+    {
+      "name": "Streaming Catalog",
+      "description": "Streaming Catalog MicroService"
+    },
+    {
+      "name": "Ratings",
+      "description": "Ratings MicroService"
+    },
+    {
+      "name": "Reviews",
+      "description": "Reviews MicroService"
+    },
+    {
+      "name": "Subscriptions",
+      "description": "Subscriptions MicroService"
+    }
+  ],
+  "relationships": [
+    {
+      "parent": "Sirius XM",
+      "child": "Streaming Content Services"
+    },
+    {
+      "parent": "Streaming Content Services",
+      "child": "Sirius XM Prod"
+    },
+    {
+      "parent": "Sirius XM Prod",
+      "child": "Streaming Catalog"
+    },
+    {
+      "parent": "Sirius XM Prod",
+      "child": "Ratings"
+    },
+    {
+      "parent": "Sirius XM Prod",
+      "child": "Reviews"
+    },
+    {
+      "parent": "Sirius XM Prod",
+      "child": "Subscriptions"
+    }
+  ]
+}
