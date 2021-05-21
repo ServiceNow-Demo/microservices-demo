@@ -2,59 +2,59 @@
   "services": [
     {
       "$class": "Business Service",
-      "name": "GE.com",
-      "description": "GE.com Business Service"
+      "name": "Sleep Number",
+      "description": "Sleep Number Business Service"
     },
     {
       "$class": "Business Service",
-      "name": "Web Services",
+      "name": "Sleep Number Web Services",
       "description": "Web Services Services Business Application"
     },
     {
-      "name": "GE Prod",
-      "description": "GE Production Application Service"
+      "name": "Prod Web Services",
+      "description": "Prod Web Application Service"
     },
     {
-      "name": "News",
-      "description": "News MicroService"
+      "name": "Inner Circle",
+      "description": "Inner Circle MicroService"
     },
     {
-      "name": "Investors",
-      "description": "Investors MicroService"
+      "name": "Sleep IQ",
+      "description": "Sleep IQ MicroService"
     },
     {
-      "name": "Careers",
-      "description": "Careers MicroService"
+      "name": "Sleep Science",
+      "description": "Sleep Science MicroService"
     },
     {
-      "name": "Businesses",
-      "description": "Businesses MicroService"
+      "name": "Support",
+      "description": "Support MicroService"
     }
   ],
   "relationships": [
     {
-      "parent": "GE.com",
-      "child": "Web Services"
+      "parent": "Sleep Number",
+      "child": "Sleep Number Web Services"
     },
     {
-      "parent": "Web Services",
-      "child": "GE Prod"
+      "parent": "Sleep Number Web Services",
+      "child": "Prod Web Services"
     },
     {
-      "parent": "GE Prod",
-      "child": "News"
+      "parent": "Prod Web Services",
+      "child": "Support"
     },
     {
-      "parent": "GE Prod",
-      "child": "Investors"
+      "parent": "Prod Web Services",
+      "child": "Sleep Science"
     },
     {
-      "parent": "GE Prod",
-      "child": "Careers"
+      "parent": "Prod Web Services",
+      "child": "Sleep IQ"
     },
     {
-      "parent": "GE Prod",
-      "child": "Businesses"
+      "parent": "Prod Web Services",
+      "child": "Inner Circle"
     }
   ]
 }
