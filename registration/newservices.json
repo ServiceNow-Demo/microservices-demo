@@ -2,12 +2,12 @@
   "services": [
     {
       "$class": "Business Service",
-      "name": "Sleep Number",
-      "description": "Sleep Number Business Service"
+      "name": "Manulife",
+      "description": "Manulife Business Service"
     },
     {
       "$class": "Business Service",
-      "name": "Sleep Number Web Services",
+      "name": "Manulife Web Services",
       "description": "Web Services Services Business Application"
     },
     {
@@ -15,16 +15,16 @@
       "description": "Prod Web Application Service"
     },
     {
-      "name": "Inner Circle",
-      "description": "Inner Circle MicroService"
+      "name": "About",
+      "description": "About MicroService"
     },
     {
-      "name": "Sleep IQ",
-      "description": "Sleep IQ MicroService"
+      "name": "Products",
+      "description": "Products MicroService"
     },
     {
-      "name": "Sleep Science",
-      "description": "Sleep Science MicroService"
+      "name": "News",
+      "description": "News MicroService"
     },
     {
       "name": "Support",
@@ -33,28 +33,28 @@
   ],
   "relationships": [
     {
-      "parent": "Sleep Number",
-      "child": "Sleep Number Web Services"
+      "parent": "Manulife",
+      "child": "Manulife Web Services"
     },
     {
-      "parent": "Sleep Number Web Services",
+      "parent": "Manulife Web Services",
       "child": "Prod Web Services"
     },
     {
       "parent": "Prod Web Services",
+      "child": "About"
+    },
+    {
+      "parent": "Prod Web Services",
+      "child": "Products"
+    },
+    {
+      "parent": "Prod Web Services",
+      "child": "News"
+    },
+    {
+      "parent": "Prod Web Services",
       "child": "Support"
-    },
-    {
-      "parent": "Prod Web Services",
-      "child": "Sleep Science"
-    },
-    {
-      "parent": "Prod Web Services",
-      "child": "Sleep IQ"
-    },
-    {
-      "parent": "Prod Web Services",
-      "child": "Inner Circle"
     }
   ]
 }
