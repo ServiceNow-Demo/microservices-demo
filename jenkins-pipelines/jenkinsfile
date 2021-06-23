@@ -26,6 +26,6 @@ node {
    }
       stage('Deploy') {
       snDevOpsChange()
-      sh "kubectl apply -f /var/jenkins_home/jobs/frontend-cd-pipeline/workspace/kubernetes-manifests/frontend.yaml"
+      sh "/root/deploy-frontend.sh"
    }
    }
