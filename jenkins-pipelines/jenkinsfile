@@ -11,7 +11,7 @@ node {
    }
    stage('Build') {
       // Run the maven build
-        sh "/usr/bin/mvn -Dmaven.test.failure.ignore test"
+        sh "export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-8-hotspot/;/usr/bin/mvn -Dmaven.test.failure.ignore test"
    }
    stage('Results') {
       //includeBuildInfo=true
