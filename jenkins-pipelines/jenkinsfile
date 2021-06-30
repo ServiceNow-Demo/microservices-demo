@@ -26,6 +26,6 @@ node {
    }
       stage('Deploy') {
       snDevOpsChange()
-      sh "/root/deploy-frontend.sh"
+      // sh "/root/deploy-frontend.sh"
    }
    }
