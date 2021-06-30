@@ -27,6 +27,6 @@ node {
       stage('Deploy') {
       snDevOpsChange()
       // sh "/root/deploy-frontend.sh"
-      sh "sleep 2"
+      sh "sleep 5"
    }
    }
