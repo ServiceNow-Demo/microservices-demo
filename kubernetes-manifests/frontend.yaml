@@ -65,7 +65,7 @@ spec:
           - name: CHECKOUT_SERVICE_ADDR
             value: "checkoutservice:5050"
           - name: AD_SERVICE_ADDR
-            value: "adservice:9555"
+            value: "adservice:9556"
           - name: ENV_PLATFORM
           ############# Change cloud platform here #################################
             value: "azure"
