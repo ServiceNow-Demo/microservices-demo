@@ -68,7 +68,7 @@ spec:
             value: "adservice:9556"
           - name: ENV_PLATFORM
           ############# Change cloud platform here #################################
-            value: "aws"
+            value: "azure"
           #######################
           # - name: DISABLE_TRACING
           #   value: "1"
